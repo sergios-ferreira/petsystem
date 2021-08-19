@@ -15,7 +15,7 @@ Este projeto acadêmico teve como intuito o desenvolvimento de Interfaces (Front
 - ⮊ Este é o Home (Principal):
      <p align="center"> <img src="https://raw.githubusercontent.com/sergiosdev/petsystem/master/img/demo/Tela_Principal.png" width="70%"></p>
 
-- ⮊ Existem 07 seções que estão incluídas no sistema:
+- ⮊ Existem 08 seções que estão incluídas no sistema:
     <p align="center"><img src="https://raw.githubusercontent.com/sergiosdev/petsystem/master/img/demo/Menu.png" width="30%"> </p>   
     
 - ⮊ Todas as tabelas estão preenchidas estaticamente, prontas para o Dev Backend.    
