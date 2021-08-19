@@ -1,0 +1,324 @@
+<!--
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
+# Descricao  : PetSystem - Sistema Veterinário              #
+#                                                           # 
+#          Front-End para Sistema Veterinário               # 
+#             Favor não remover os créditos                 # 
+#                                                           # 
+#        Ajude o autor a desenvolver + projetos             # 
+#                  entre em Contato !!!                     # 
+#                                                           # 
+# Autor      : Sergio Ferreira - sergio.soft@email.com      #
+# Data       : 12/06/2020                                   #
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
+-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<title>PetSystem - Clínica Veterinária</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="../css/bootstrap.min.css" />
+<link rel="stylesheet" href="../css/bootstrap-responsive.min.css" />
+<link rel="stylesheet" href="../css/uniform.css" />
+<link rel="stylesheet" href="../css/select2.css" />
+<link rel="stylesheet" href="../css/matrix-style.css" />
+<link rel="stylesheet" href="../css/matrix-media.css" />
+<link rel="stylesheet" href="../font-awesome/css/font-awesome.css"/>
+<link rel="stylesheet" href="../css/jquery.gritter.css" />
+<link rel="stylesheet" href="../css/dataTables.bootstrap.min.css" />
+<link rel="stylesheet" href="../css/buttons.bootstrap.min.css" />
+<link rel="stylesheet" href="../css/bootstrap-wysihtml5.css" />
+<link rel="shortcut icon" href="../img/logo.ico"/>
+
+</head>
+<body>
+
+<!--Header-part-->
+<div id="header">
+  <h1>&nbsp;</h1>
+</div>
+<!--close-Header-part--> 
+
+
+<!--top-Header-menu-->
+<div id="user-nav" class="navbar navbar-inverse">
+  <ul class="nav">
+    <li  class="dropdown" id="profile-messages" ><a title="" href="#" data-toggle="dropdown" data-target="#profile-messages" class="dropdown-toggle"><i class="icon icon-user"></i>  <span class="text">Administrador</span><b class="caret"></b></a>
+      <ul class="dropdown-menu">
+        <li><a href="#"><i class="icon-user"></i> Meu Perfil</a></li>
+        <li class="divider"></li>
+        <li><a href="../index.html"><i class="icon-key"></i> Deslogar</a></li>
+      </ul>
+    </li>
+
+    <li class=""><a title="" href="../index.html"><i class="icon icon-share-alt"></i> <span class="text">Logout</span></a></li>
+  </ul>
+</div>
+<!--close-top-Header-menu-->
+
+<!--sidebar-menu-->
+<div id="sidebar"><a href="#" class="visible-phone"><i class="icon icon-home"></i> Dashboard</a>
+  <ul>
+    <li><a href="../home.html"><i class="icon icon-home"></i> <span>Home</span></a> </li>
+    <li> <a href="../proprietarios/index.html"><i class="icon icon-group"></i> <span>Proprietários de Pets</span></a> </li>
+    <li> <a href="../pets/index.html"><i class="icon icon-github"></i> <span>Pets</span></a> </li>
+    <li><a href="../produtos/index.html"><i class="icon icon-th"></i> <span>Produtos</span></a></li>
+    <li><a href="../servicos/index.html"><i class="icon icon-tags"></i> <span>Serviços</span></a></li>
+    <li><a href="../agenda/index.html"><i class="icon icon-list-alt"></i> <span>Agenda</span><span class="label label-important">100</span></a></li>
+    <li class="active"><a href="../atendimentos/index.html"><i class="icon icon-user-md"></i> <span>Atendimentos</span></a></li> 
+    <li><a href="../usuarios/index.html"><i class="icon icon-cogs"></i> <span>Usuários</span></a></li>
+
+  </ul>
+</div>
+<!--sidebar-menu-->
+
+<!--main-container-part-->
+<div id="content">
+<!--breadcrumbs-->
+  <div id="content-header">
+    <div id="breadcrumb"> 
+        <a href="../home.html" data-original-title="Voltar - Página Inicial" title="Ir para página inicial" class="tip-bottom"><i class="icon-home"></i> Home PetSystem</a>
+        <a href="index.html">Gerenciar Atendimento</a> 
+        <a href="cadastrar.html" class="current">Cadastrar Atendimento</a>
+    </div>       
+  </div>
+<!--End-breadcrumbs-->
+  
+
+  <div class="container-fluid">
+
+    <div class="row-fluid">
+      <div class="span12">
+ 
+        <div class="widget-box">
+          <div class="widget-title"> <span class="icon"><i class="icon-th"></i></span>
+            <h5>Cadastrar Atendimento</h5> 
+            <span id="botaoCadastro" ><a href="index.html" class="btn btn-warning btn-mini"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">⇦ Voltar</font></font></a>
+          </div>
+          <div class="widget-content nopadding">
+          	     
+		<form name="formulario" id="formulario" action="#" method="get" class="form-horizontal">
+
+
+           <div class="control-group">
+              <label class="control-label"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Data/Hora do Cadastro</font></font></label>
+               <div class="controls">
+                <div class="input-prepend"> <span class="add-on"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"><i class="icon-calendar"></i></font></font></span>
+                <input type="text"  class="span10 m-wrap text-center" readonly="readonly" value="05/03/2020">
+                </div>
+                <div class="input-prepend"> <span class="add-on"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"><i class="icon-time"></i></font></font></span>
+                <input type="text"  class="span7 m-wrap text-center" readonly="readonly" value="19:20:02">
+                </div>
+              </div>
+            </div>
+
+
+          <div class="control-group">
+              <label class="control-label">Selecione o PET agendado:</label>
+              <div class="controls">
+                <select>                
+                  <option></option>
+                  <option selected>MIMI</option>                  
+                  <option>IGUIS</option>        
+                  <option>TOTÓ</option>        
+                  <option>ZEUS</option>        
+                  <option>DIANA</option>        
+                </select>
+              </div>
+            </div>
+
+        <div class="control-group">
+              <label class="control-label">Status do Atendimento:</label>
+              <div class="controls">
+                <select>                
+                  <option selected>Em Aberto</option>
+                  <option>Cancelado</option>                  
+                  <option>Encerrado</option>                     
+                </select>
+              </div>
+            </div>
+
+            <div class="control-group">
+              <label class="control-label">Categoria do Serviço:</label>
+              <div class="controls">
+                <select multiple >
+                  <option selected>CONSULTAS</option>
+                  <option>VACINAS</option>
+                  <option>CIRURGIA</option>
+                  <option>CASTRAÇÃO</option>
+                  <option>BANHO E TOSA</option>
+                </select>
+              </div>
+            </div>
+
+
+            <div class="control-group">
+              <label class="control-label">Sinais e Sintomas: </label>
+              <div class="controls">
+                <textarea class="span11">PET COM DIFICULDADE DE LOCOMOÇÃO</textarea>
+              </div>
+            </div>
+
+            <div class="control-group">
+              <label class="control-label">Diagnóstico: </label>
+              <div class="controls">
+                <textarea class="span11">PROBLEMAS NA COLUNA PELA IDADE </textarea>
+              </div>
+            </div>
+
+            <div class="control-group">
+              <label class="control-label">Produto (Se houver):</label>
+              <div class="controls">
+                <select multiple >
+                  <option selected>VACINA ANTI-RAIVA</option>
+                  <option>AREIA HIGIÊNICA PIPICAT CLASSIC</option>
+                  <option>PETISCO WHISKAS TEMPTATIONS</option>
+                  <option>BANHO A SECO SPRAY BELLOKÃO</option>
+                  <option>DIAZIPRIM ANTIMICROBIANO</option>
+                </select>
+              </div>
+            </div>
+
+
+            <div class="control-group">
+              <label class="control-label">Observações:</label>
+              <div class="controls">
+                <textarea class="span11">DEVERÁ TOMAR MEDICAÇÃO A CADA 15 DIAS.</textarea>
+              </div>
+            </div>
+
+
+           <div class="control-group">
+              <label class="control-label"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Valor</font></font></label>
+              <div class="controls">
+                <div class="input-prepend"> <span class="add-on"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">R$</font></font></span>
+                  <input type="text" class="span10 m-wrap" readonly="readonly" value="250.0">
+                </div>
+              </div>
+            </div>
+
+            <div class="form-actions">
+            	      <div class="row">
+                           <div class="col-md-12">
+                                <div style="float:right;">
+                                    <button type="submit" class="btn btn-primary enviar-dados">Atualizar!</button>
+                                    <button type="reset" class="btn btn-default">Limpar Campos</button>
+                                </div>       
+                           </div>
+                         </div>    
+           		 </div>
+                <input readonly="" type="text" class="form-control" id="curStatus" value="1" style="display:none;" hidden="">
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+     <!-- Modal Info -->
+        <div class='modal fade' id='modalStatus' tabindex='-1' role='dialog' aria-labelledby='myModalLabel' aria-hidden='true' data-backdrop="static">
+            <div class='modal-dialog'>
+                <div class='modal-content'>
+                    <!-- Modal Header -->
+                    <div class='modal-header'>
+
+                        <h4 class="modal-title">
+            <i  class='fa fa-refresh' style='font-size:20px; padding-right:1%;' aria-hidden='true'></i>
+            Status</h4>
+
+                    </div>
+                    <div class="modal-body">
+                        <center>Status: <strong><span class="status"></span></strong>
+                        </center>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="#" type="button" class="btn btn-default status-yes">Ok</a>
+                    </div>
+                </div>
+            </div>
+        </div>        
+<!--Footer-part-->
+<div class="row-fluid">
+  <div id="footer" class="span12"> 2020 © | PetSystem </div>
+</div>
+<!--end-Footer-part-->
+<script src="../js/jquery.min.js"></script> 
+<script src="../js/jquery.ui.custom.js"></script> 
+<script src="../js/bootstrap.min.js"></script> 
+<script src="../js/bootstrap-colorpicker.js"></script> 
+<script src="../js/bootstrap-datepicker.js"></script> 
+<script src="../js/masked.js"></script> 
+<script src="../js/jquery.uniform.js"></script> 
+<script src="../js/select2.min.js"></script> 
+<script src="../js/matrix.js"></script> 
+<script src="../js/wysihtml5-0.3.0.js"></script> 
+<script src="../js/jquery.peity.min.js"></script> 
+<script src="../js/bootstrap-wysihtml5.js"></script> 
+</body>
+<script type="text/javascript">
+   
+    $("select").select2({
+    "language": "pt-BR"
+    });
+
+
+  $('#datepicker').datepicker({
+    dateFormat: 'dd-mm-yy',
+    dayNames: ['Domingo','Segunda','Terça','Quarta','Quinta','Sexta','Sábado'],
+    dayNamesMin: ['D','S','T','Q','Q','S','S','D'],
+    dayNamesShort: ['Dom','Seg','Ter','Qua','Qui','Sex','Sáb','Dom'],
+    monthNames: ['Janeiro','Fevereiro','Março','Abril','Maio','Junho','Julho','Agosto','Setembro','Outubro','Novembro','Dezembro'],
+    monthNamesShort: ['Jan','Fev','Mar','Abr','Mai','Jun','Jul','Ago','Set','Out','Nov','Dez'],
+    nextText: 'Próximo',
+    prevText: 'Anterior'
+});
+
+ // MODAL CADASTRAR -----------------------------------    
+    $('.enviar-dados').on('click', function(evento) {
+
+         evento.preventDefault(); 
+        
+            var url = "URL_CONTROLLER_QUE_VAI_ADICIONAR_UM_ITEM.php";
+        
+            //console.log($("#empCEP").val() ); /*DEBUG*/
+
+            $.ajax({
+                type: "GET",
+                dataType: "html",
+                url: url,
+                data: $("#formulario").serialize(),
+
+                success: function(respostaDaURL) {                    
+
+                    if (respostaDaURL != 1) {
+                        respostaDaURL = "Não houve resposta da página " + url;
+                    }
+
+                    $('span.status').text(respostaDaURL);
+                    $("#modalStatus").modal('show');
+
+                    $("a.status-yes").click(function() {
+                        window.location.href="index.html";
+                    });
+
+
+                },
+                error: function(respostaDaURL) {                    
+
+                    if (respostaDaURL != 1) {
+                        respostaDaURL = "Não houve resposta da página " + url;
+                    }
+
+                    $('span.status').text(respostaDaURL);
+                    $("#modalStatus").modal('show');
+
+                    $("a.status-yes").click(function() {
+                        window.location.reload();
+                    });
+                }
+            });    
+    });       
+    </script>
+</html>

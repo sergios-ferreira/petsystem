@@ -1,0 +1,256 @@
+<!--
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
+# Descricao  : PetSystem - Sistema Veterinário              #
+#                                                           # 
+#          Front-End para Sistema Veterinário               # 
+#             Favor não remover os créditos                 # 
+#                                                           # 
+#        Ajude o autor a desenvolver + projetos             # 
+#                  entre em Contato !!!                     # 
+#                                                           # 
+# Autor      : Sergio Ferreira - sergio.soft@email.com      #
+# Data       : 12/06/2020                                   #
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
+-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<title>PetSystem - Clínica Veterinária</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="css/bootstrap.min.css" />
+<link rel="stylesheet" href="css/bootstrap-responsive.min.css" />
+<link rel="stylesheet" href="css/fullcalendar.css" />
+<link rel="stylesheet" href="css/matrix-style.css" />
+<link rel="stylesheet" href="css/matrix-media.css" />
+<link rel="stylesheet" href="font-awesome/css/font-awesome.css"  />
+<link rel="stylesheet" href="css/jquery.gritter.css" />
+<link rel="shortcut icon" href="img/logo.ico"/>
+
+</head>
+<body>
+
+<!--Header-part-->
+<div id="header">
+  <h1>&nbsp;</h1>
+</div>
+<!--close-Header-part--> 
+
+
+<!--top-Header-menu-->
+<div id="user-nav" class="navbar navbar-inverse">
+  <ul class="nav">
+    <li  class="dropdown" id="profile-messages" ><a title="" href="#" data-toggle="dropdown" data-target="#profile-messages" class="dropdown-toggle"><i class="icon icon-user"></i>  <span class="text">Administrador</span><b class="caret"></b></a>
+      <ul class="dropdown-menu">
+        <li><a href="#"><i class="icon-user"></i> Meu Perfil</a></li>
+        <li class="divider"></li>
+        <li><a href="index.html"><i class="icon-key"></i> Deslogar</a></li>
+      </ul>
+    </li>
+
+    <li class=""><a title="" href="index.html"><i class="icon icon-share-alt"></i> <span class="text">Logout</span></a></li>
+  </ul>
+</div>
+<!--close-top-Header-menu-->
+
+<!--sidebar-menu-->
+<div id="sidebar"><a href="#" class="visible-phone"><i class="icon icon-home"></i> Dashboard</a>
+  <ul>
+    <li class="active"><a href="home.html"><i class="icon icon-home"></i> <span>Home</span></a> </li>
+    <li> <a href="proprietarios/index.html"><i class="icon icon-group"></i> <span>Proprietários de Pets</span></a> </li>
+    <li> <a href="pets/index.html"><i class="icon icon-github"></i> <span>Pets</span></a> </li>
+    <li><a href="produtos/index.html"><i class="icon icon-th"></i> <span>Produtos</span></a></li>
+    <li><a href="servicos/index.html"><i class="icon icon-tags"></i> <span>Serviços</span></a></li>
+    <li><a href="agenda/index.html"><i class="icon icon-list-alt"></i> <span>Agenda</span><span class="label label-important">100</span></a></li>
+    <li><a href="atendimentos/index.html"><i class="icon icon-user-md"></i> <span>Atendimentos</span></a></li>
+    <li><a href="usuarios/index.html"><i class="icon icon-cogs"></i> <span>Usuários</span></a></li>
+
+  </ul>
+</div>
+<!--sidebar-menu-->
+
+<!--main-container-part-->
+<div id="content">
+<!--breadcrumbs-->
+  <div id="content-header">
+    <div id="breadcrumb"> <a href="home.html" title="Ir para página inicial" class="tip-bottom"><i class="icon-home"></i> Home PetSystem</a></div>
+  </div>
+<!--End-breadcrumbs-->
+
+<!--Action boxes-->
+  <div class="container-fluid">
+    <div class="quick-actions_homepage">
+      <ul class="quick-actions">        
+        <li class="bg_ls"> <a href="proprietarios/index.html"> <i class="icon-group"></i><span class="label label-success">12</span> Proprietários</a> </li>
+        <li class="bg_ls"> <a href="pets/index.html"> <i class="icon-github"></i><span class="label label-success">12</span> Pets</a> </li>
+        <li class="bg_ls"> <a href="produtos/index.html"> <i class="icon-group"></i><span class="label label-success">5</span> Produtos </a> </li>
+        <li class="bg_ls"> <a href="servicos/index.html"> <i class="icon-tags"></i><span class="label label-success">5</span> Serviços</a></li>
+        <li class="bg_ls"> <a href="agenda/index.html"> <i class="icon-list-alt"></i><span class="label label-important">100</span> Agenda</a></li>
+        <li class="bg_ls"> <a href="atendimentos/index.html"> <i class="icon-user-md"></i><span class="label label-success">5</span> Atendimentos</a></li>
+        <li class="bg_ls"> <a href="usuarios/index.html"> <i class="icon-cogs"></i><span class="label label-success">1</span> Usuários</a></li>
+      </ul>
+    </div>
+<!--End-Action boxes-->    
+
+
+<!--End-Chart-box--> 
+    <hr/>
+    <div class="row-fluid">
+      <div class="span6">
+
+
+        <div class="widget-box">
+          <div class="widget-title"> <span class="icon"><i class="icon-ok"></i></span>
+            <h5>Conversão de Atendimento (100 Agendados Hoje)</h5>
+          </div>
+          <div class="widget-content">
+            <ul class="unstyled">
+              <li> <span class="icon24 icomoon-icon-arrow-down-2 green"></span> 30% Pets Atendidos <span class="pull-right strong">30</span>
+                <div class="progress progress-striped ">
+                  <div style="width: 30%;" class="bar"></div>
+                </div>
+              </li>
+              <li> <span class="icon24 icomoon-icon-arrow-up-2 green"></span> 68% Aguardando chegar <span class="pull-right strong">68</span>
+                <div class="progress progress-warning progress-striped">
+                  <div style="width: 68%;" class="bar"></div>
+                </div>
+              </li>
+              <li> <span class="icon24 icomoon-icon-arrow-up-2 green"></span> 2% Cancelamentos <span class="pull-right strong">2</span>
+                <div class="progress  progress-danger progress-striped ">
+                  <div style="width: 2%;" class="bar"></div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+
+        <div class="widget-box">
+          <div class="widget-title"> <span class="icon"> <i class="icon-signal"></i> </span>
+            <h5>Venda de Produtos x Serviços (Semana)</h5>
+          </div>
+          <div class="widget-content">
+            <div class="chart"></div>
+          </div>
+        </div>
+
+      </div>
+
+
+      <div class="span6">
+        <div class="widget-box">
+          <div class="widget-title bg_lo"  data-toggle="collapse" href="#collapseG3" > <span class="icon"> <i class="icon-chevron-down"></i> </span>
+            <h5>Top 3 - Últimos Atendimentos Particulares (Mês) </h5>
+          </div>
+          <div class="widget-content nopadding updates collapse in" id="collapseG3">
+           
+            <div class="new-update clearfix"> <i class="icon-question-sign"></i> <span class="update-notice"> <a title="" href="#"><strong>Pet: Totó | Cachorro | Valor Total: R$ 1250,00</strong></a> <span> Proprietário: João da Silva Santos | (92) 9482-9929</span> </span> <span class="update-date"><span class="update-day">04</span>marc</span> </div>
+         
+            <div class="new-update clearfix"> <i class="icon-question-sign"></i> <span class="update-notice"> <a title="" href="#"><strong>Pet: Thor | Cachorro | Valor Total: R$ 990,0</strong></a> <span> Proprietário: José da Silva Santos | (92) 9482-9930</span> </span> <span class="update-date"><span class="update-day">03</span>marc</span> </div>
+           
+         
+           <div class="new-update clearfix"> <i class="icon-question-sign"></i> <span class="update-notice"> <a title="" href="#"><strong>Pet: Zeus | Gato | Valor Total: R$ 800,0</strong></a> <span> Proprietário: Maria da Silva Santos | (92) 9482-9931</span> </span> <span class="update-date"><span class="update-day">02</span>marc</span> </div>
+           
+             
+
+
+          </div>
+        </div>  
+
+<div class="widget-box">
+          <div class="widget-title"> <span class="icon"><i class="icon-ok"></i></span>
+            <h5><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Top Vendas Produtos/Serviços (Mês)</font></font></h5>
+          </div>
+          <div class="widget-content">
+            <div class="todo">
+              <ul>
+                <li class="clearfix">
+                  <div class="txt"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Vermifugação </font></font><span class="by label"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> Dr. Girafales </font></font></span>  </div>
+                  <div class="pull-right"> <span class="date badge badge-success"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Total R$ 850,0</font></font></span> </div>
+                </li>
+                <li class="clearfix">
+                  <div class="txt"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Vacina anti-raiva </font></font><span class="by label"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> Dra. Florinda </font></font></span>  </div>
+                  <div class="pull-right"> <span class="date badge badge-success"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Total R$ 550,0</font></font></span> </div>
+                </li>
+
+              <li class="clearfix">
+                  <div class="txt"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Diaziprim Antimicrobiano</font></font><span class="by label"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> Dr. Chaves </font></font></span>  </div>
+                  <div class="pull-right"> <span class="date badge badge-success"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Total R$ 450,0</font></font></span> </div>
+                </li>
+
+
+             <li class="clearfix">
+                  <div class="txt"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Areia Higiênica Pipicat Classic</font></font><span class="by label"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> Dr. Barriga </font></font></span>  </div>
+                  <div class="pull-right"> <span class="date badge badge-warning"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Total R$ 350,0</font></font></span> </div>
+                </li>
+
+             <li class="clearfix">
+                  <div class="txt"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Petisco Whiskas Temptations</font></font><span class="by label"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> Dr. Clotilde </font></font></span>  </div>
+                  <div class="pull-right"> <span class="date badge badge-warning"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Total R$ 290,0</font></font></span> </div>
+                </li>
+       
+
+               <li class="clearfix">
+                  <div class="txt"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Antipulgas e Carrapatos Effipro</font></font><span class="by label"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> Dr. Kiko</font></font></span>  </div>
+                  <div class="pull-right"> <span class="date badge badge-important"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Total R$ 190,0</font></font></span> </div>
+                </li>
+       
+           <li class="clearfix">
+                  <div class="txt"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Banho a Seco Spray Bellokão</font></font><span class="by label"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> Dr. Clovis</font></font></span>  </div>
+                  <div class="pull-right"> <span class="date badge badge-important"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Total R$ 80,0</font></font></span> </div>
+                </li>
+
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+</div>
+
+<!--end-main-container-part-->
+
+<!--Footer-part-->
+
+<div class="row-fluid">
+  <div id="footer" class="span12"> 2020 © | PetSystem </div>
+</div>
+
+<!--end-Footer-part-->
+
+
+<script src="js/excanvas.min.js"></script> 
+<script src="js/jquery.min.js"></script> 
+<script src="js/jquery.ui.custom.js"></script> 
+<script src="js/bootstrap.min.js"></script> 
+<script src="js/jquery.flot.min.js"></script> 
+<script src="js/jquery.flot.pie.min.js"></script> 
+<script src="js/matrix.charts.js"></script> 
+<script src="js/jquery.flot.resize.min.js"></script> 
+<script src="js/jquery.peity.min.js"></script> 
+<script src="js/fullcalendar.min.js"></script> 
+<script src="js/matrix.js"></script> 
+<script src="js/matrix.dashboard.js"></script> 
+<script src="js/matrix.interface.js"></script> 
+<script src="js/matrix.chat.js"></script> 
+<script src="js/jquery.validate.js"></script> 
+<script src="js/matrix.form_validation.js"></script> 
+<script src="js/jquery.wizard.js"></script> 
+<script src="js/jquery.uniform.js"></script> 
+<script src="js/select2.min.js"></script>  
+<script src="js/jquery.dataTables.min.js"></script> 
+<script src="js/matrix.tables.js"></script> 
+
+<script type="text/javascript">
+
+
+// resets the menu selection upon entry to this page:
+function resetMenu() {
+   document.gomenu.selector.selectedIndex = 2;
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,410 @@
+<!--
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
+# Descricao  : PetSystem - Sistema Veterinário              # 
+#                                                           # 
+#          Front-End para Sistema Veterinário               # 
+#             Favor não remover os créditos                 # 
+#                                                           # 
+#        Ajude o autor a desenvolver + projetos             # 
+#                  entre em Contato !!!                     # 
+#                                                           # 
+# Autor      : Sergio Ferreira - sergio.soft@email.com      #
+# Data       : 12/06/2020                                   #
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
+-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<title>PetSystem - Clínica Veterinária</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="../css/bootstrap.min.css" />
+<link rel="stylesheet" href="../css/bootstrap-responsive.min.css" />
+<link rel="stylesheet" href="../css/uniform.css" />
+<link rel="stylesheet" href="../css/select2.css" />
+<link rel="stylesheet" href="../css/matrix-style.css" />
+<link rel="stylesheet" href="../css/matrix-media.css" />
+<link rel="stylesheet" href="../font-awesome/css/font-awesome.css"/>
+<link rel="stylesheet" href="../css/jquery.gritter.css" />
+<link rel="stylesheet" href="../css/dataTables.bootstrap.min.css" />
+<link rel="stylesheet" href="../css/buttons.bootstrap.min.css" />
+<link rel="shortcut icon" href="../img/logo.ico"/>
+
+</head>
+<body>
+
+<!--Header-part-->
+<div id="header">
+  <h1>&nbsp;</h1>
+</div>
+<!--close-Header-part--> 
+
+
+<!--top-Header-menu-->
+<div id="user-nav" class="navbar navbar-inverse">
+  <ul class="nav">
+    <li  class="dropdown" id="profile-messages" ><a title="" href="#" data-toggle="dropdown" data-target="#profile-messages" class="dropdown-toggle"><i class="icon icon-user"></i>  <span class="text">Administrador</span><b class="caret"></b></a>
+      <ul class="dropdown-menu">
+        <li><a href="#"><i class="icon-user"></i> Meu Perfil</a></li>
+        <li class="divider"></li>
+        <li><a href="../index.html"><i class="icon-key"></i> Deslogar</a></li>
+      </ul>
+    </li>
+
+    <li class=""><a title="" href="../index.html"><i class="icon icon-share-alt"></i> <span class="text">Logout</span></a></li>
+  </ul>
+</div>
+<!--close-top-Header-menu-->
+
+<!--sidebar-menu-->
+<div id="sidebar"><a href="#" class="visible-phone"><i class="icon icon-home"></i> Dashboard</a>
+  <ul>
+    <li><a href="../home.html"><i class="icon icon-home"></i> <span>Home</span></a> </li>
+    <li class="active"> <a href="../proprietarios/index.html"><i class="icon icon-group"></i> <span>Proprietários de Pets</span></a> </li>
+    <li> <a href="../pets/index.html"><i class="icon icon-github"></i> <span>Pets</span></a> </li>
+    <li><a href="../produtos/index.html"><i class="icon icon-th"></i> <span>Produtos</span></a></li>
+    <li><a href="../servicos/index.html"><i class="icon icon-tags"></i> <span>Serviços</span></a></li>
+    <li><a href="../agenda/index.html"><i class="icon icon-list-alt"></i> <span>Agenda</span><span class="label label-important">100</span></a></li>
+    <li><a href="../atendimentos/index.html"><i class="icon icon-user-md"></i> <span>Atendimentos</span></a></li>            
+    <li><a href="../usuarios/index.html"><i class="icon icon-cogs"></i> <span>Usuários</span></a></li>
+
+  </ul>
+</div>
+<!--sidebar-menu-->
+
+<!--main-container-part-->
+<div id="content">
+<!--breadcrumbs-->
+  <div id="content-header">
+    <div id="breadcrumb"> 
+        <a href="../home.html" data-original-title="Voltar - Página Inicial" title="Ir para página inicial" class="tip-bottom"><i class="icon-home"></i> Home PetSystem</a>
+        <a href="#" class="current">Gerenciar Proprietários de Pets</a> </div>       
+  </div>
+<!--End-breadcrumbs-->
+  
+
+  <div class="container-fluid">
+
+    <div class="row-fluid">
+      <div class="span12">
+ 
+        <div class="widget-box">
+          <div class="widget-title"> <span class="icon"><i class="icon-th"></i></span>
+            <h5>Gerenciar Proprietários de Pets</h5> 
+            <span id="botaoCadastro" ><a href="cadastrar.html" class="btn btn-warning btn-mini"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">✙ Cadastrar Novo</font></font></a>
+          </div>
+          <div class="widget-content nopadding">
+            <table class="table table-bordered data-table">
+              <thead>
+                <tr>
+                  <th>Cód</th>
+                  <th>Nome Proprietário</th>
+                  <th>Endereço</th>
+                  <th>Celular</th>
+                  <th>Opções</th>
+                </tr>
+              </thead>
+              <tbody>
+
+              <tr class="gradeX">                
+                  <td><center> 1 </center> </td>
+                  <td>JOÃO DA SILVA</td>
+                  <td>R. LOBO D´ALMADA - CASA 55 - CENTRO </td>
+                  <td>92 9 9111-2233</td>  
+                  <td><center>                   
+                        <a href="visualizar.html" class="btn btn-success btn-mini"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"><i class="icon-eye-open"></i> Visualizar </font></font></a> 
+
+                        <a href="editar.html" class="btn btn-primary btn-mini">
+                        <font style="vertical-align: inherit;"><i class="icon-edit"></i> Editar </font></font></a> 
+                        
+                        <a href="#" class="btn btn-danger btn-mini" data-id="1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"><i class="icon-remove"></i> Excluir<font></font></a>                     
+                  </center></td>               
+                </tr>
+
+              <tr class="gradeX">                
+                  <td><center> 2 </center> </td>
+                  <td>MARIA QUEIROZ</td>
+                  <td>R. DA SEDE, N32 - SÃO RAIMUNDO</td>
+                  <td>92 9 8435-6978</td>  
+                  <td><center>                   
+                        <a href="visualizar.html" class="btn btn-success btn-mini"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"><i class="icon-eye-open"></i> Visualizar </font></font></a> 
+
+                        <a href="editar.html" class="btn btn-primary btn-mini">
+                        <font style="vertical-align: inherit;"><i class="icon-edit"></i> Editar </font></font></a> 
+                        
+                        <a href="#" class="btn btn-danger btn-mini" data-id="2"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"><i class="icon-remove"></i> Excluir<font></font></a>                     
+                  </center></td>               
+                </tr>
+
+              <tr class="gradeX">                
+                  <td><center> 3 </center> </td>
+                  <td>JAIR BOLSONARO</td>
+                  <td>ESTRADA DO TARUMÃ - N100 - PONTA NEGRA</td>
+                  <td>92 9 9223-3243</td>  
+                  <td><center>                   
+                        <a href="visualizar.html" class="btn btn-success btn-mini"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"><i class="icon-eye-open"></i> Visualizar </font></font></a> 
+
+                        <a href="editar.html" class="btn btn-primary btn-mini">
+                        <font style="vertical-align: inherit;"><i class="icon-edit"></i> Editar </font></font></a> 
+                        
+                        <a href="#" class="btn btn-danger btn-mini" data-id="3"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"><i class="icon-remove"></i> Excluir<font></font></a>                     
+                  </center></td>               
+                </tr>  
+
+              <tr class="gradeX">                
+                  <td><center> 4 </center> </td>
+                  <td>DAVID ASSAYAG</td>
+                  <td>AV. EDUARDO RIBEIRO - N10 - CENTRO</td>
+                  <td>92 9 9223-3243</td>  
+                  <td><center>                   
+                        <a href="visualizar.html" class="btn btn-success btn-mini"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"><i class="icon-eye-open"></i> Visualizar </font></font></a> 
+
+                        <a href="editar.html" class="btn btn-primary btn-mini">
+                        <font style="vertical-align: inherit;"><i class="icon-edit"></i> Editar </font></font></a> 
+                        
+                        <a href="#" class="btn btn-danger btn-mini" data-id="4"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"><i class="icon-remove"></i> Excluir<font></font></a>                     
+                  </center></td>               
+                </tr>  
+
+             <tr class="gradeX">                
+                  <td><center> 5 </center> </td>
+                  <td>ENEIAS AQUINO</td>
+                  <td>R. BARÃO DOS OFICIAIS - N1200 - FLORES</td>
+                  <td>92 9 8423-4321</td>  
+                  <td><center>                   
+                        <a href="visualizar.html" class="btn btn-success btn-mini"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"><i class="icon-eye-open"></i> Visualizar </font></font></a> 
+
+                        <a href="editar.html" class="btn btn-primary btn-mini">
+                        <font style="vertical-align: inherit;"><i class="icon-edit"></i> Editar </font></font></a> 
+                        
+                        <a href="#" class="btn btn-danger btn-mini" data-id="5"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"><i class="icon-remove"></i> Excluir<font></font></a>                     
+                  </center></td>               
+                </tr>  
+
+                <tr class="gradeX">                
+                  <td><center> 6 </center> </td>
+                  <td>NICOLAS JUNIOR</td>
+                  <td>R. BARÃO DOS OFICIAIS - N1200 - FLORES</td>
+                  <td>92 9 8323-1234</td>  
+                  <td><center>                   
+                        <a href="visualizar.html" class="btn btn-success btn-mini"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"><i class="icon-eye-open"></i> Visualizar </font></font></a> 
+
+                        <a href="editar.html" class="btn btn-primary btn-mini">
+                        <font style="vertical-align: inherit;"><i class="icon-edit"></i> Editar </font></font></a> 
+                        
+                        <a href="#" class="btn btn-danger btn-mini" data-id="6"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"><i class="icon-remove"></i> Excluir<font></font></a>                     
+                  </center></td>               
+                </tr> 
+
+
+                <tr class="gradeX">                
+                  <td><center> 7 </center> </td>
+                  <td>ALINE MARY</td>
+                  <td>CONDOMÍNIO ALPHAVILLE MANAUS 1 - N10 - PONTA NEGRA</td>
+                  <td>92 9 8223-2334</td>  
+                  <td><center>                   
+                        <a href="visualizar.html" class="btn btn-success btn-mini"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"><i class="icon-eye-open"></i> Visualizar </font></font></a> 
+
+                        <a href="editar.html" class="btn btn-primary btn-mini">
+                        <font style="vertical-align: inherit;"><i class="icon-edit"></i> Editar </font></font></a> 
+                        
+                        <a href="#" class="btn btn-danger btn-mini" data-id="7"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"><i class="icon-remove"></i> Excluir<font></font></a>                     
+                  </center></td>               
+                </tr>                 
+
+               <tr class="gradeX">                
+                  <td><center> 8 </center> </td>
+                  <td>JEAN MARK</td>
+                  <td>CONDOMÍNIO TARUMÃ 1 - N24 - TARUMÃ</td>
+                  <td>92 9 8245-6585</td>  
+                  <td><center>                   
+                        <a href="visualizar.html" class="btn btn-success btn-mini"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"><i class="icon-eye-open"></i> Visualizar </font></font></a> 
+
+                        <a href="editar.html" class="btn btn-primary btn-mini">
+                        <font style="vertical-align: inherit;"><i class="icon-edit"></i> Editar </font></font></a> 
+                        
+                        <a href="#" class="btn btn-danger btn-mini" data-id="8"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"><i class="icon-remove"></i> Excluir<font></font></a>                     
+                  </center></td>               
+                </tr>     
+
+
+               <tr class="gradeX">                
+                  <td><center> 9 </center> </td>
+                  <td>MILTON BARBOSA</td>
+                  <td>R. DA INVASÃO II - N171 - CIDADE DE DEUS</td>
+                  <td>92 9 8346-6643</td>  
+                  <td><center>                   
+                        <a href="visualizar.html" class="btn btn-success btn-mini"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"><i class="icon-eye-open"></i> Visualizar </font></font></a> 
+
+                        <a href="editar.html" class="btn btn-primary btn-mini">
+                        <font style="vertical-align: inherit;"><i class="icon-edit"></i> Editar </font></font></a> 
+                        
+                        <a href="#" class="btn btn-danger btn-mini" data-id="9"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"><i class="icon-remove"></i> Excluir<font></font></a>                     
+                  </center></td>               
+                </tr> 
+
+               <tr class="gradeX">                
+                  <td><center> 10 </center> </td>
+                  <td>JORGE MENEZES</td>
+                  <td>R. OLAVO BILAC - N80 - SÃO RAIMUNDO</td>
+                  <td>92 9 8324-5335</td>  
+                  <td><center>                   
+                        <a href="visualizar.html" class="btn btn-success btn-mini"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"><i class="icon-eye-open"></i> Visualizar </font></font></a> 
+
+                        <a href="editar.html" class="btn btn-primary btn-mini">
+                        <font style="vertical-align: inherit;"><i class="icon-edit"></i> Editar </font></font></a> 
+                        
+                        <a href="#" class="btn btn-danger btn-mini" data-id="10"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"><i class="icon-remove"></i> Excluir<font></font></a>                     
+                  </center></td>               
+                </tr> 
+
+               <tr class="gradeX">                
+                  <td><center> 11 </center> </td>
+                  <td>GEANY MOURA</td>
+                  <td>R. DO COMANDO MILITAR 2 - N32 - ADRIANÓPOLIS</td>
+                  <td>92 9 8345-2754</td>  
+                  <td><center>                   
+                        <a href="visualizar.html" class="btn btn-success btn-mini"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"><i class="icon-eye-open"></i> Visualizar </font></font></a> 
+
+                        <a href="editar.html" class="btn btn-primary btn-mini">
+                        <font style="vertical-align: inherit;"><i class="icon-edit"></i> Editar </font></font></a> 
+                        
+                        <a href="#" class="btn btn-danger btn-mini" data-id="11"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"><i class="icon-remove"></i> Excluir<font></font></a>                     
+                  </center></td>               
+                </tr> 
+
+               <tr class="gradeX">                
+                  <td><center> 12 </center> </td>
+                  <td>CESAR BOTELHO</td>
+                  <td>AV. DJALMA BATISTA - N170 - CHAPADA</td>
+                  <td>92 9 8342-4324</td>  
+                  <td><center>                   
+                        <a href="visualizar.html" class="btn btn-success btn-mini"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"><i class="icon-eye-open"></i> Visualizar </font></font></a> 
+
+                        <a href="editar.html" class="btn btn-primary btn-mini">
+                        <font style="vertical-align: inherit;"><i class="icon-edit"></i> Editar </font></font></a> 
+                        
+                        <a href="#" class="btn btn-danger btn-mini" data-id="12"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"><i class="icon-remove"></i> Excluir<font></font></a>                     
+                  </center></td>               
+                </tr> 
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="modalDelete" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="static" style="display: none;">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar"><span aria-hidden="true">×</span>
+                        </button>
+                        <h4 class="modal-title" id="modalLabel">Excluir Item</h4>
+                    </div>
+                    <div class="modal-body">
+                        <center>Deseja realmente excluir o Item #<span class="id">1001</span>?</center>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="#" type="button" class="btn btn-danger deleta-sim">Sim</a>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Não</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+     <!-- Modal Info -->
+        <div class='modal fade' id='modalStatus' tabindex='-1' role='dialog' aria-labelledby='myModalLabel' aria-hidden='true' data-backdrop="static">
+            <div class='modal-dialog'>
+                <div class='modal-content'>
+                    <!-- Modal Header -->
+                    <div class='modal-header'>
+
+                        <h4 class="modal-title">
+            <i  class='fa fa-refresh' style='font-size:20px; padding-right:1%;' aria-hidden='true'></i>
+            Informações da Atualização</h4>
+
+                    </div>
+                    <div class="modal-body">
+                        <center>Status: <strong><span class="status"></span></strong>
+                        </center>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="#" type="button" class="btn btn-default status-yes">Ok</a>
+                    </div>
+                </div>
+            </div>
+        </div>        
+<!--Footer-part-->
+<div class="row-fluid">
+  <div id="footer" class="span12"> 2020 © | PetSystem </div>
+</div>
+<!--end-Footer-part-->
+<script src="../js/jquery.min.js"></script> 
+<script src="../js/jquery.ui.custom.js"></script> 
+<script src="../js/bootstrap.min.js"></script> 
+<script src="../js/jquery.uniform.js"></script> 
+<script src="../js/select2.min.js"></script> 
+<script src="../js/jquery.dataTables.min.js"></script> 
+<script src="../js/dataTables.buttons.min.js"></script> 
+<script src="../js/dataTables.bootstrap.min.js"></script> 
+<script src="../js/matrix.js"></script> 
+<script src="../js/matrix.tables.js"></script>
+</body>
+<script type="text/javascript">
+
+     // MODAL DELETAR -----------------------------------    
+    $('.btn.btn-danger.btn-mini').on('click', function() {
+
+        var url = "URL_CONTROLLER_QUE_VAI_REMOVER_UM_ITEM.jsp";
+
+        var id = $(this).data('id'); /* Pegar o ID a ser removido */
+        $('span.id').text(id); // inserir o ID da tabela dentro do modal
+
+
+        $("a.deleta-sim").click(function() {
+            $.ajax({
+                type: "GET",
+                dataType: "html",
+                url: url,
+                data: 'id='+id, /*atributo ID deve estar no Controller para ser recebido como GET ou Request */
+
+                success: function(respostaDaURL) {
+
+                    $("#modalDelete").modal('hide');
+
+                    if (respostaDaURL == "") {
+                        respostaDaURL = "Não houve resposta da página" + url;
+                    }
+
+                    $('span.status').text(respostaDaURL);
+                    $("#modalStatus").modal('show');
+
+                    $("a.status-yes").click(function() {
+                        window.location.reload();
+                    });
+
+
+                },
+                error: function(respostaDaURL) {
+
+                    $("#modalDelete").modal('hide');
+
+                    if (respostaDaURL == "") {
+                        respostaDaURL = "Não houve resposta da página" + url;
+                    }
+
+                    $('span.status').text(respostaDaURL);
+                    $("#modalStatus").modal('show');
+
+                    $("a.status-yes").click(function() {
+                        window.location.reload();
+                    });
+                }
+            });
+        });
+
+        $('#modalDelete').modal('show'); // modal aparece
+    });       
+    </script>
+</html>

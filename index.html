@@ -1,0 +1,76 @@
+
+<!--
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
+# Descricao  : PetSystem - Sistema Veterinário              #
+#                                                           # 
+#          Front-End para Sistema Veterinário               # 
+#             Favor não remover os créditos                 # 
+#                                                           # 
+#        Ajude o autor a desenvolver + projetos             # 
+#                  entre em Contato !!!                     # 
+#                                                           # 
+# Autor      : Sergio Ferreira - sergio.soft@email.com      #
+# Data       : 12/06/2020                                   #
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+    
+
+<head>
+        <title>PetSystem - Sistema Veterinário</title><meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="css/bootstrap.min.css" />
+		<link rel="stylesheet" href="css/bootstrap-responsive.min.css" />
+        <link rel="stylesheet" href="css/matrix-login.css" />
+        <link href="font-awesome/css/font-awesome.css" rel="stylesheet" />
+        <link rel="stylesheet" href="../css/select2.css" />
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,800' rel='stylesheet' type='text/css'>
+
+    </head>
+    <body>        
+        <center><h2 style="color:#fff">PetSystem - Clínica Veterinária</h2></center>
+        <div id="loginbox">            
+            <form id="loginform" class="form-vertical" action="index.html">
+				 <div class="control-group normal_text"> <h3><img src="img/logo_login.png" alt="Logo" width="50%" style="border-radius: 10px;"/></h3></div>
+                <div class="control-group">
+                    <div class="controls">
+                        <div class="main_input_box">
+                            <span class="add-on bg_lg"><i class="icon-user"> </i></span><input type="text" placeholder="Usuário" />
+                        </div>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <div class="controls">
+                        <div class="main_input_box">
+                            <span class="add-on bg_ly"><i class="icon-lock"></i></span><input type="password" placeholder="Senha" />
+                        </div>
+                    </div>
+                </div>
+                <div class="form-actions">
+                    <span class="pull-left"><a href="#" class="flip-link btn btn-info" id="to-recover">Esqueceu a senha?</a></span>
+                    <span class="pull-right"><a type="submit" href="home.html" class="btn btn-success" /> Login</a></span>
+                </div>
+            </form>
+            <form id="recoverform" action="#" class="form-vertical">
+				<p class="normal_text">Digite seu endereço de e-mail abaixo e nós lhe enviaremos instruções sobre como recuperar uma senha.</p>
+				
+                    <div class="controls">
+                        <div class="main_input_box">
+                            <span class="add-on bg_lo"><i class="icon-envelope"></i></span><input type="text" placeholder="Seu E-mail" />
+                        </div>
+                    </div>
+               
+                <div class="form-actions">
+                    <span class="pull-left"><a href="#" class="flip-link btn btn-success" id="to-login">&laquo; Voltar para login</a></span>
+                    <span class="pull-right"><a class="btn btn-info"/>Recuperar!</a></span>
+                </div>
+            </form>
+        </div>
+        
+        <script src="js/jquery.min.js"></script>  
+        <script src="js/matrix.login.js"></script> 
+    </body>
+
+</html>

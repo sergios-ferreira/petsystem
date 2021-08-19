@@ -1,0 +1,192 @@
+<!--
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
+# Descricao  : PetSystem - Sistema Veterinário              #
+#                                                           # 
+#          Front-End para Sistema Veterinário               # 
+#             Favor não remover os créditos                 # 
+#                                                           # 
+#        Ajude o autor a desenvolver + projetos             # 
+#                  entre em Contato !!!                     # 
+#                                                           # 
+# Autor      : Sergio Ferreira - sergio.soft@email.com      #
+# Data       : 12/06/2020                                   #
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
+-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<title>PetSystem - Clínica Veterinária</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="../css/bootstrap.min.css" />
+<link rel="stylesheet" href="../css/bootstrap-responsive.min.css" />
+<link rel="stylesheet" href="../css/fullcalendar.css" />
+<link rel="stylesheet" href="../css/matrix-style.css" />
+<link rel="stylesheet" href="../css/matrix-media.css" />
+<link rel="stylesheet" href="../font-awesome/css/font-awesome.css"/>
+<link rel="shortcut icon" href="../img/logo.ico"/>
+
+</head>
+<body>
+
+<!--Header-part-->
+<div id="header">
+  <h1>&nbsp;</h1>
+</div>
+<!--close-Header-part--> 
+
+
+<!--top-Header-menu-->
+<div id="user-nav" class="navbar navbar-inverse">
+  <ul class="nav">
+    <li  class="dropdown" id="profile-messages" ><a title="" href="#" data-toggle="dropdown" data-target="#profile-messages" class="dropdown-toggle"><i class="icon icon-user"></i>  <span class="text">Administrador</span><b class="caret"></b></a>
+      <ul class="dropdown-menu">
+        <li><a href="#"><i class="icon-user"></i> Meu Perfil</a></li>
+        <li class="divider"></li>
+        <li><a href="../index.html"><i class="icon-key"></i> Deslogar</a></li>
+      </ul>
+    </li>
+
+    <li class=""><a title="" href="../index.html"><i class="icon icon-share-alt"></i> <span class="text">Logout</span></a></li>
+  </ul>
+</div>
+<!--close-top-Header-menu-->
+
+<!--sidebar-menu-->
+<div id="sidebar"><a href="#" class="visible-phone"><i class="icon icon-home"></i> Dashboard</a>
+  <ul>
+    <li><a href="../home.html"><i class="icon icon-home"></i> <span>Home</span></a> </li>
+    <li> <a href="../proprietarios/index.html"><i class="icon icon-group"></i> <span>Proprietários de Pets</span></a> </li>
+    <li> <a href="../pets/index.html"><i class="icon icon-github"></i> <span>Pets</span></a> </li>
+    <li><a href="../produtos/index.html"><i class="icon icon-th"></i> <span>Produtos</span></a></li>
+    <li><a href="../servicos/index.html"><i class="icon icon-tags"></i> <span>Serviços</span></a></li>
+    <li class="active"><a href="../agenda/index.html"><i class="icon icon-list-alt"></i> <span>Agenda</span><span class="label label-important">100</span></a></li>
+    <li><a href="../atendimentos/index.html"><i class="icon icon-user-md"></i> <span>Atendimentos</span></a></li>        
+    <li><a href="../usuarios/index.html"><i class="icon icon-cogs"></i> <span>Usuários</span></a></li>
+
+  </ul>
+</div>
+<!--sidebar-menu-->
+
+<!--main-container-part-->
+<div id="content">
+<!--breadcrumbs-->
+  <div id="content-header">
+    <div id="breadcrumb"> 
+        <a href="../home.html" data-original-title="Voltar - Página Inicial" title="Ir para página inicial" class="tip-bottom"><i class="icon-home"></i> Home PetSystem</a>
+        <a href="#" class="current">Gerenciar Agenda</a> </div>       
+  </div>
+<!--End-breadcrumbs-->
+  
+
+
+  <div class="container-fluid">
+    <hr>
+    <div class="row-fluid">
+      <div class="span12">
+        <div class="widget-box widget-calendar">
+          <div class="widget-title"> <span class="icon"><i class="icon-calendar"></i></span>
+            <h5>Agenda</h5>
+            <div class="buttons"> <a id="add-event" data-toggle="modal" href="#modal-add-event" class="btn btn-warning btn-mini"><i class="icon-plus icon-white"></i> Adicionar na Agenda</a>
+              <div class="modal hide" id="modal-add-event">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal">×</button>
+                  <h3>Adicionar na Agenda</h3>
+                </div>
+                <div class="modal-body">
+                  <p>Digite o nome do Pet que terá atendimento</p>
+                  <p>
+                    <input id="event-name" type="text" />
+                  </p>
+       
+                </div>
+
+                <div class="modal-footer"> <a href="#" class="btn" data-dismiss="modal">Cancelar</a> <a href="#" id="add-event-submit" class="btn btn-primary">Adicionar na Agenda</a> </div>
+              </div>
+            </div>
+          </div>
+          <div class="widget-content">
+            <div class="panel-left">
+              <div id="fullcalendar"></div>
+            </div>
+            <div id="external-events" class="panel-right">
+              <div class="panel-title">
+                <h5>Arraste os eventos para o calendário</h5>
+              </div>
+              <div class="panel-content">
+                <div class="external-event ui-draggable label label-inverse">Consulta #200 | #2-MIMI</div>
+                <div class="external-event ui-draggable label label-inverse">Consulta #201 | #3-IGUIS</div>
+                <div class="external-event ui-draggable label label-inverse">Consulta #204 | #9-TOTÓ</div>
+                <div class="external-event ui-draggable label label-inverse">Consulta #205 | #6-ZEUS</div>
+                <div class="external-event ui-draggable label label-inverse">Consulta #206 | #4-DIANA</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>  
+<div class="modal fade" id="modalDelete" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="static" style="display: none;">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar"><span aria-hidden="true">×</span>
+                        </button>
+                        <h4 class="modal-title" id="modalLabel">Excluir Item</h4>
+                    </div>
+                    <div class="modal-body">
+                        <center>Deseja realmente excluir o Item #<span class="id">1001</span>?</center>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="#" type="button" class="btn btn-danger deleta-sim">Sim</a>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Não</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+     <!-- Modal Info -->
+        <div class='modal fade' id='modalStatus' tabindex='-1' role='dialog' aria-labelledby='myModalLabel' aria-hidden='true' data-backdrop="static">
+            <div class='modal-dialog'>
+                <div class='modal-content'>
+                    <!-- Modal Header -->
+                    <div class='modal-header'>
+
+                        <h4 class="modal-title">
+            <i  class='fa fa-refresh' style='font-size:20px; padding-right:1%;' aria-hidden='true'></i>
+            Informações da Atualização</h4>
+
+                    </div>
+                    <div class="modal-body">
+                        <center>Status: <strong><span class="status"></span></strong>
+                        </center>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="#" type="button" class="btn btn-default status-yes">Ok</a>
+                    </div>
+                </div>
+            </div>
+        </div>        
+<!--Footer-part-->
+<div class="row-fluid">
+  <div id="footer" class="span12"> 2020 © | PetSystem </div>
+</div>
+<!--end-Footer-part-->
+</body>
+<script src="../js/jquery.min.js"></script> 
+<script src="../js/jquery.ui.custom.js"></script> 
+<script src="../js/bootstrap.min.js"></script> 
+<script src="../js/fullcalendar.min.js"></script> 
+<script src="../js/select2.min.js"></script> 
+<script src="../js/matrix.js"></script> 
+<script src="../js/matrix.calendar.js"></script> 
+
+</body>
+<script type="text/javascript">
+   
+    $("select").select2({
+    "language": "pt-BR"
+    });
+</script>
+</html>
