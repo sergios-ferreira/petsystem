@@ -7,7 +7,6 @@
 
 Este projeto acadêmico teve como intuito o desenvolvimento de Interfaces (Frontend) para um Sistema de Informação Veterinário.
 
-
 - 🔭 Sistema de Login e Home (Página Principal). 
 - ⮊  Atenção: Página de Login não possui usuário/senha, pode acessar normalmente sem restrição (a princípio).
       <p align="center"> <img src="https://raw.githubusercontent.com/sergiosdev/petsystem/master/img/demo/Login.png" width="50%"> </p>
